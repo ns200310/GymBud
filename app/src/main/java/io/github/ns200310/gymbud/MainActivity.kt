@@ -1,5 +1,6 @@
 package io.github.ns200310.gymbud
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -45,29 +46,32 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GymBudTheme {
-                Scaffold( modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Column(
-                        modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).padding(innerPadding),
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally,
 
-                    ) {
-                        Row (
-                            modifier = Modifier.padding(5.dp)
-                        ) {
-                            LoginBtn(name = "Google", modifier = Modifier.fillMaxWidth(0.7f))
-                        }
-                        Row(
-                            modifier = Modifier.padding(5.dp)
-                        ) {
-                            LoginBtn(name = "Outlook",  modifier = Modifier.fillMaxWidth(0.7f))
-                        }
-                        Row(
-                            modifier = Modifier.padding(5.dp)
-                        ) {
-                            LoginBtn(name = "Email",  modifier = Modifier.fillMaxWidth(0.7f))
-                        }
-                    }
+                Scaffold( modifier = Modifier.fillMaxSize()) {
+                         innerPadding ->
+
+//                    Column(
+//                        modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).padding(innerPadding),
+//                        verticalArrangement = Arrangement.Center,
+//                        horizontalAlignment = Alignment.CenterHorizontally,
+//
+//                    ) {
+//                        Row (
+//                            modifier = Modifier.padding(5.dp)
+//                        ) {
+//                            LoginBtn(name = "Google", modifier = Modifier.fillMaxWidth(0.7f))
+//                        }
+//                        Row(
+//                            modifier = Modifier.padding(5.dp)
+//                        ) {
+//                            LoginBtn(name = "Outlook",  modifier = Modifier.fillMaxWidth(0.7f))
+//                        }
+//                        Row(
+//                            modifier = Modifier.padding(5.dp)
+//                        ) {
+//                            LoginBtn(name = "Email",  modifier = Modifier.fillMaxWidth(0.7f))
+//                        }
+//                    }
                 }
             }
         }
